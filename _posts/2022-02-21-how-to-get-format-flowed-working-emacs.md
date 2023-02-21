@@ -12,7 +12,7 @@ Also, in the config documentation for Mu4e this is mentioned:
 
 The functions below reformat the message before sending it to comply with the above, even if you didn't format it properly.
 
-```
+```emacs-lisp
 (setq mu4e-compose-format-flowed t)
 (add-hook mu4e-compose-mode-hook (lambda () (auto-fill-mode -1)))
 (setq fill-flowed-encode-column 998)
@@ -63,4 +63,14 @@ match the fill=flowed RFC."
 (advice-add 'message-send-and-exit :before #'mu4e-fill-buffer-for-flowed)
 
 (provide 'mu4e-format-flowed)
+```
+
+You'll want to copy this to a file and add it to the `load-path` like this:
+```emacs-lisp
+(add-to-list 'load-path "PATH-TO-THE-DIRECTORY-OF-WHERE-YOU-PUT-THE-FILE")
+```
+
+Then require the file:
+```emacs-lisp
+(require 'mu4e-format-flowed)
 ```
