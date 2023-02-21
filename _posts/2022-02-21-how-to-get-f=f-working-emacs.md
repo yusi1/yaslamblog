@@ -1,9 +1,10 @@
 ---
 layout: post
 author: Yusef Aslam
+title: How to get format=flowed working in Mu4e inside Emacs
 ---
 
-The best way to get `f=f` (AKA `format=flowed`) working inside Emacs, is to put this file into `load-path` and require it.
+The best way to get `f=f` (AKA `format=flowed`) working inside Mu4e on Emacs, is to put this code into a file, and then into `load-path` and require it.
 
 ```
 (setq mu4e-compose-format-flowed t)
