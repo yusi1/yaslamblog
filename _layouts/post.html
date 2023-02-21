@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
-      {% include navigation.html %}
-      <p class="postinfo">{{ page.author }} - {{ page.date | date_to_string }}</p>
-      {{ content }}
+    {% include navigation.html %}
+    <p class="postinfo">{{ page.author }} - {{ page.date | date_to_string }}</p>
+    {{ content | replace: '<a', '<a target="_blank"' }}
   </body>
 </html>
