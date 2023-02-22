@@ -1,4 +1,4 @@
-<ul>
+<ul class="sitenav">
   {% for post in site.posts %}
   <li><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></li>
   {{ post.excerpt | replace: '<p', '<p class="postdesc"' | replace: '<a', '<a target="_blank"' }}
