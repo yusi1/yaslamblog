@@ -4,5 +4,5 @@ title: About
 ---
 
 # About this page
-This is my website where I intend to post stuff that I want to remember in the future.
+This is a website created by me (Yusef Aslam) where I intend to post stuff that I want to remember in the future.
 
