@@ -29,7 +29,7 @@ unpublished         : false
 
 # Plugins
 whitelist           : []
-plugins             : []
+plugins             : ["jekyll-toc"]
 
 # Conversion
 markdown            : kramdown
