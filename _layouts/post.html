@@ -23,6 +23,9 @@
             <p class="post-info">{{ page.author }} - {{ page.date | date_to_string }}</p>
         </div>
         <sep id="post-data-break"></sep>
+        <div id="post-tags-sep">
+            <em class="post-tags">Tags: {{ page.tags }}</em>
+        </div>
     </div>
     {{ content | replace: '<a', '<a target="_blank"' | toc }}
   </body>
