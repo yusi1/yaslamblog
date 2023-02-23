@@ -1,2 +1,12 @@
 <nav class="nav">
+    <div id="nav-container">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.link }}"
+            {% if page.url == item.link %}
+            class="current"
+            {% else %}
+            class="noncurrent"
+            {% endif %}>{{ item.name }}</a>
+      {% endfor %}
+    </div>
 </nav>
