@@ -28,6 +28,10 @@
             <em class="post-tags">Tags: {{ page.tags }}</em>
         </div>
     </div>
-    {{ content | replace: '<a', '<a target="_blank"' | toc }}
+    <main>
+        <div class="post">
+            {{ content | replace: '<a', '<a target="_blank"' | toc }}
+        </div>
+    </main>
   </body>
 </html>
