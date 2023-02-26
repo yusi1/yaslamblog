@@ -20,15 +20,7 @@
   </head>
   <body>
     {% include navigation.html %}
-    <div id="post-data-sep">
-        <div id="post-info-sep">
-            <p class="post-info">{{ page.author }} - {{ page.date | date_to_string }}</p>
-        </div>
-        <sep id="post-data-break"></sep>
-        <div id="post-tags-sep">
-            <em class="post-tags">Tags: {{ page.tags }}</em>
-        </div>
-    </div>
+    {% include post-data.html %}
     <main>
         <div class="post">
             {{ content | replace: '<a', '<a target="_blank"' | toc }}
