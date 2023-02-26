@@ -6,7 +6,7 @@ tags: emacs-lisp, format=flowed, mail
 toc: false
 ---
 
-The best way to get [f=f](https://joeclark.org/ffaq.html) (AKA [format=flowed](https://joeclark.org/ffaq.html)) working inside Mu4e on Emacs, is to put this code into a file, and then into `load-path` and require it.
+The best way to get [f=f](https://joeclark.org/ffaq.html) (AKA [format=flowed](https://joeclark.org/ffaq.html)) working inside Mu4e on Emacs, is to put this code into a file, and then into `load-path` and `require` it.
 
 Also, in the [config documentation for Mu4e](https://www.djcbsoftware.nl/code/mu/mu4e/Writing-messages.html#How-can-I-apply-format_003dflowed-to-my-outgoing-messages_003f) this is mentioned:
 > For this to happen properly, you should write each paragraph of your message of as a long line (i.e. without carriage return). If you introduce unwanted newlines in your paragraph, use M-q to reformat it as a single line.
