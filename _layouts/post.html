@@ -6,6 +6,9 @@
     <head>
         <html lang=en-GB>
             <meta charset="utf-8">
+            <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncatewords:30 }}">
+            <meta name="author" content="{{ page.author }}">
+            <meta name="keywords" content="{{ page.tags }}">
             <title>{{ page.title }}</title>
             <link rel="stylesheet" href="/assets/css/style.css">
             <link href="/assets/css/syntax.css" rel="stylesheet" >
