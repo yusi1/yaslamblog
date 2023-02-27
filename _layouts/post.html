@@ -28,17 +28,7 @@
             <main>
                 <div class="post">
                     {{ content | replace: '<a', '<a target="_blank"' | toc }}
-                    <div class="utterances">
-                        {% if page.comments %}
-                            <script src="https://utteranc.es/client.js"
-                                    repo="yusi1/blog-comments"
-                                    issue-term="pathname"
-                                    theme="photon-dark"
-                                    crossorigin="anonymous"
-                                    async>
-                            </script>
-                        {% endif %}
-                    </div>
+                    {% include comments.html %}
                 </div>
             </main>
             {% include footer.html %}
