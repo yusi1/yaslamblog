@@ -11,6 +11,11 @@
   </head>
   <body>
       {% include navigation.html %}
-      {{ content }}
+      <div id="page-container">
+        <div id="content-wrap">
+          {{ content }}
+        </div>
+        {% include footer.html %}
+      </div>
   </body>
 </html>

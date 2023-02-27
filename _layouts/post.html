@@ -11,20 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script>
-        // Add anchors on DOMContentLoaded
-        document.addEventListener('DOMContentLoaded', function(event) {
-          anchors.add('h1');
-        });
+     // Add anchors on DOMContentLoaded
+     document.addEventListener('DOMContentLoaded', function(event) {
+         anchors.add('h1');
+     });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     {% include navigation.html %}
     {% include post-data.html %}
-    <main>
-        <div class="post">
-            {{ content | replace: '<a', '<a target="_blank"' | toc }}
-        </div>
-    </main>
+      <div id="post-container">
+          <main>
+              <div class="post">
+                  {{ content | replace: '<a', '<a target="_blank"' | toc }}
+              </div>
+          </main>
+          {% include footer.html %}
+      </div>
   </body>
 </html>

@@ -1,3 +1,6 @@
+---
+---
+
 <!doctype html>
 <html>
   <head>
@@ -11,7 +14,12 @@
   </head>
   <body>
       {% include navigation.html %}
-      {{ content }}
-      {% include links.html %}
+      <div id="page-container">
+        <div id="content-wrap">
+          {{ content }}
+          {% include links.html %}
+        </div>
+        {% include footer.html %}
+      </div>
   </body>
 </html>
