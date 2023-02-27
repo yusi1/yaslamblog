@@ -10,6 +10,8 @@ toc: true
 
 A Beginner's Guide to Installing Vertico in Emacs with `use-package`
 
+![Vertico-Picture](https://github.com/minad/vertico/blob/screenshots/vertico-mx.png?raw=true)
+
 Emacs is a powerful text editor that has been around for decades, and it has a vast ecosystem of packages that extend its capabilities. One such package is Vertico, which provides a flexible and efficient interface for searching and navigating through files, buffers, and other Emacs resources. In this tutorial, I'll show you how to install Vertico as a package in Emacs using the `use-package` macro.
 
 ## Prerequisites
