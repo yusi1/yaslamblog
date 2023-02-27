@@ -42,7 +42,6 @@ Documenting the steps I took to install Funtoo Linux.
 
 > **<u>FOR NETWORKING</u>** you have to copy the `/etc/resolv.conf` file from the host to the Funtoo rootfs in `/etc`, in order to be able to access the internet.
 
-
 ## [FURTHER ON IN THESE NOTES I&rsquo;M IN THE CHROOT UNLESS I SAY OTHERWISE]
 
 -   Chrooted into the install outside the vm with (inside the mount directory) `chroot . /bin/su --login`, the reason to use `/bin/su` is because it sets useful environment variables that are needed.
