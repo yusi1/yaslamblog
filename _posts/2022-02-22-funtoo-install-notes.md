@@ -3,6 +3,7 @@ layout: post
 author: Yusef Aslam
 tags: funtoo, linux
 toc: true
+comments: true
 ---
 
 Documenting the steps I took to install Funtoo Linux.

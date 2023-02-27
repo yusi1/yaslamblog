@@ -4,6 +4,7 @@ author: Yusef Aslam
 title: How to get format=flowed working in Mu4e inside Emacs
 tags: emacs-lisp, format=flowed, mail
 toc: false
+comments: true
 ---
 
 The best way to get [f=f](https://joeclark.org/ffaq.html) (AKA [format=flowed](https://joeclark.org/ffaq.html)) working inside Mu4e on Emacs, is to put this code into a file, and then into `load-path` and `require` it.
