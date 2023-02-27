@@ -9,6 +9,7 @@
             <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncatewords:30 }}">
             <meta name="author" content="{{ page.author }}">
             <meta name="keywords" content="{{ page.tags }}">
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{{ page.title }}</title>
             <link rel="stylesheet" href="/assets/css/style.css">
             <link href="/assets/css/syntax.css" rel="stylesheet" >
@@ -22,7 +23,6 @@
                  anchors.add('h1');
              });
             </script>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         {% include navigation.html %}
