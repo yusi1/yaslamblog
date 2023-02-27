@@ -57,7 +57,7 @@ Documenting the steps I took to install Funtoo Linux.
     ```
 (since this vm will only have a single root partition, nothing else)
 
--   NOTE: Use UUID&rsquo;s in fstab when installing on a second hard drive on baremetal, Funtoo wouldn&rsquo;t boot without using UUID&rsquo;s in fstab because grub doesn&rsquo;t know which hard drive is the second or first because names must be assigned dynamically like for example `/dev/sda` could be the second hard drive while `/dev/sdb` could be the first, and grub doesn&rsquo;t know, so it is better to use UUID&rsquo;s in fstab since you are hardcoding exactly which partition is what specific UUID.
+>   NOTE: Use UUID&rsquo;s in fstab when installing on a second hard drive on baremetal, Funtoo wouldn&rsquo;t boot without using UUID&rsquo;s in fstab because grub doesn&rsquo;t know which hard drive is the second or first because names must be assigned dynamically like for example `/dev/sda` could be the second hard drive while `/dev/sdb` could be the first, and grub doesn&rsquo;t know, so it is better to use UUID&rsquo;s in fstab since you are hardcoding exactly which partition is what specific UUID.
 
 -   Created timezone symlink to `/etc/localtime` with
 
@@ -78,10 +78,10 @@ Documenting the steps I took to install Funtoo Linux.
 
 ## BUG I RAN INTO
 
--   The Funtoo wiki suggests to update the system before doing first boot
-    because the &ldquo;bindist&rdquo; use flag is enabled by default and can cause problems
-    if the system is not updated before first boot, so I ran
-    `emerge -auDN @world` to update the system. (TAKES A WHILE)
+The Funtoo wiki suggests to update the system before doing first boot because
+the &ldquo;bindist&rdquo; use flag is enabled by default and can cause
+problems if the system is not updated before first boot, so I ran
+`emerge -auDN @world` to update the system. (TAKES A WHILE)
 
 ### [ERROR THAT I RAN INTO &#x2013; HAPPENED LAST TIME ASWELL]
 
@@ -90,8 +90,8 @@ Documenting the steps I took to install Funtoo Linux.
     > ERROR: sys-apps/coreutils-9.1::core-kit failed (prepare phase):
      > patch -p1  failed with   /var/tmp/portage/sys-apps/coreutils-9.1/files/coreutils-9.0-fix-chmod-symlink-exit.patch
 
--   There&rsquo;s a bug report in the official Funtoo bug tracker for this, further proves that I did nothing wrong in the install process: <https://bugs.funtoo.org/plugins/servlet/mobile#issue/FL-9709>
-    -   Related: <https://bugs.funtoo.org/plugins/servlet/mobile#issue/FL-9704>
+- There&rsquo;s a bug report in the official Funtoo bug tracker for this, further proves that I did nothing wrong in the install process: <https://bugs.funtoo.org/plugins/servlet/mobile#issue/FL-9709>
+- Related: <https://bugs.funtoo.org/plugins/servlet/mobile#issue/FL-9704>
 
 ### FIX FOR THIS BUG
 
