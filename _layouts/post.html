@@ -1,33 +1,33 @@
 <!doctype html>
 <html>
-  <head>
-    <html lang=en-GB>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="/assets/css/syntax.css" rel="stylesheet" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-    <script>
-     // Add anchors on DOMContentLoaded
-     document.addEventListener('DOMContentLoaded', function(event) {
-         anchors.add('h1');
-     });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    {% include navigation.html %}
-    {% include post-data.html %}
-      <div id="post-container">
-          <main>
-              <div class="post">
-                  {{ content | replace: '<a', '<a target="_blank"' | toc }}
-              </div>
-          </main>
-          {% include footer.html %}
-      </div>
-  </body>
+    <head>
+        <html lang=en-GB>
+            <meta charset="utf-8">
+            <title>{{ page.title }}</title>
+            <link rel="stylesheet" href="/assets/css/style.css">
+            <link href="/assets/css/syntax.css" rel="stylesheet" >
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+            <script>
+             // Add anchors on DOMContentLoaded
+             document.addEventListener('DOMContentLoaded', function(event) {
+                 anchors.add('h1');
+             });
+            </script>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        {% include navigation.html %}
+        {% include post-data.html %}
+        <div id="post-container">
+            <main>
+                <div class="post">
+                    {{ content | replace: '<a', '<a target="_blank"' | toc }}
+                </div>
+            </main>
+            {% include footer.html %}
+        </div>
+    </body>
 </html>
