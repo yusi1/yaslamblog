@@ -159,7 +159,21 @@ hr
   #nav-container > .noncurrent:hover
     text-decoration: underline
 
-.blog-post-list > li > a
+#blog-entries-heading
+  // border-bottom: 1px solid grey
+  margin-right: 4px
+
+.blog-post-list
+  margin-left: 20px
+  margin-right: 20px
+  .blog-post
+    margin-bottom: 10px
+    max-width: 500px
+    .blog-post-data
+      margin: 0
+      padding: 0
+
+.blog-post-list > .blog-post > .blog-post-data > a
   &:active, &:hover
     background-color: #A1CCA5
     color: #212529
@@ -230,7 +244,7 @@ p#post-info
   // margin-left: 8px
   color: #8D959D
 
-#post-excerpt
+.post-excerpt
   font-size: 70%
   font-style: italic
   /* color: white
