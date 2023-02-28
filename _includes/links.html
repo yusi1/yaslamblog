@@ -1,6 +1,10 @@
-<ul class="blog-post-list">
-  {% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></li>
-  {{ post.excerpt | replace: '<p', '<p id="post-excerpt"' | replace: '<a', '<a target="_blank"' }}
-  {% endfor %}
-</ul>
+<div id="blog-post-list">
+    {% for post in site.posts %}
+    <div class="blog-post">
+        <div class="blog-post-data">
+            <a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a>
+            {{ post.excerpt | replace: '<p', '<p class="post-excerpt"' | replace: '<a', '<a target="_blank"' }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
