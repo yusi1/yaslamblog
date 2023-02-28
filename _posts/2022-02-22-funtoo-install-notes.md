@@ -8,19 +8,19 @@ comments: true
 
 Documenting the steps I took to install Funtoo Linux.
 
-# First notes
+# Initial Steps
 
 -   Created single partition in `/dev/sda1` inside the vm (will be mounted at `/`)
 -   Mounted partition at `/mnt` outside of the vm, by mounted the vm HDD onto the
     host `/mnt` directory
 
-# Second notes
+# Unpacking the stage3 archive
 
 -   Unpacked gnome stage3 archive with
     `tar --numeric-owner --xattrs --xattrs-include='*' -xpf <stage3>.tar.xz`
     and them extra options to preserve what the root fs needs.
 
-## IMPORTANT procedures before chrooting
+## Procedures before chrooting
 
 -   FIRST MAKE SURE THAT YOU ARE IN THE MOUNT DIRECTORY (i.e funtoo root, `/mnt`)
 -   Mounted `/proc` from host to funtoo root with:
@@ -41,15 +41,13 @@ Documenting the steps I took to install Funtoo Linux.
     mount --rbind /dev dev
     ```
 
-> **<u>FOR NETWORKING</u>** you have to copy the `/etc/resolv.conf` file from the host to the Funtoo rootfs in `/etc`, in order to be able to access the internet.
-
-## [FURTHER ON IN THESE NOTES I&rsquo;M IN THE CHROOT UNLESS I SAY OTHERWISE]
+> **<u>FOR NETWORKING</u>** you have to copy the `/etc/resolv.conf` file from the host to the Funtoo rootfs in `/etc`, in order to be able to access the internet
 
 -   Chrooted into the install outside the vm with (inside the mount directory) `chroot . /bin/su --login`, the reason to use `/bin/su` is because it sets useful environment variables that are needed.
 -   Setted prompt with `export PS1="(chroot) ${PS1}"`
 -   Ran `ego sync` to sync the Funtoo portage repository
 
-# Third notes
+# Configuring the system
 
 -   Created `/etc/fstab` with
 
@@ -79,15 +77,6 @@ Documenting the steps I took to install Funtoo Linux.
 
 ## BUG I RAN INTO
 
-The Funtoo wiki suggests to update the system before doing first boot because
-the &ldquo;bindist&rdquo; use flag is enabled by default and can cause
-problems if the system is not updated before first boot, so I ran
-`emerge -auDN @world` to update the system. (TAKES A WHILE)
-
-### [ERROR THAT I RAN INTO &#x2013; HAPPENED LAST TIME ASWELL]
-
--   I ran into an error which stopped me from doing the install further:
-
     > ERROR: sys-apps/coreutils-9.1::core-kit failed (prepare phase):
      > patch -p1  failed with   /var/tmp/portage/sys-apps/coreutils-9.1/files/coreutils-9.0-fix-chmod-symlink-exit.patch
 
@@ -105,7 +94,7 @@ problems if the system is not updated before first boot, so I ran
 # Steps that need to be done inside of the VM
 
 
-## Fourth notes
+## Firmware & Bootloader configuration
 
 -   Installed the latest `linux-firmware` package with
 
@@ -129,7 +118,7 @@ problems if the system is not updated before first boot, so I ran
     ```
     >   Instead of `grub-mkconfig -o /boot/grub/grub.cfg` or in some distros `update-grub`, `ego` is Funtoo&rsquo;s system management tool designed for these kinds of tasks.
 
-# Fifth notes - NEARLY READY TO BOOT!
+# Networking, Groups and User Account configuration
 
 -   Enabled the dhcp service to make sure networking is enabled on first boot with
     
@@ -149,7 +138,7 @@ problems if the system is not updated before first boot, so I ran
     passwd yaslam
     ```
 
-## Needed for sudoing
+## Privilege Escalation
 
 -   Installed the `sudo` package since it isn&rsquo;t installed by default with
    
@@ -162,7 +151,7 @@ problems if the system is not updated before first boot, so I ran
     %wheel ALL=(ALL:ALL) ALL
     ```
 
-## STEP THAT IS NEEDED FOR VMWARE VM - Installed Vmware-tools
+## VMware Tools
 
 -   Install `vmware-tools` in the VM for graphical acceleration in VMware virtual machines in Xorg with
     
@@ -170,7 +159,9 @@ problems if the system is not updated before first boot, so I ran
     emerge xf86-video-vmware
     ```
 
-## OPTIONAL - Install an entropy generator for enhanced randomness in generating random numbers (good for security)
+## Entropy
+
+> This is optional.
 
 -   Install the `haveged` package with
     
@@ -185,7 +176,7 @@ problems if the system is not updated before first boot, so I ran
     
     and now it will automatically enhance the random number generator that is in the Linux kernel.
 
-# Sixth notes - FINAL STEPS
+# Exit, Unmount and Reboot
 
 -   Exit the chroot shell with
     
