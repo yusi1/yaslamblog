@@ -31,8 +31,8 @@
             <main>
                 <div class="post">
                     {{ content | replace: '<a', '<a target="_blank"' | toc }}
-                    {% include comments.html %}
                 </div>
+                {% include comments.html %}
             </main>
             {% include footer.html %}
         </div>
