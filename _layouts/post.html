@@ -23,9 +23,11 @@
                  anchors.add('h1');
              });
             </script>
+            {% include algolia.html %}
     </head>
     <body>
         {% include navigation.html %}
+        <div id="search"></div>
         {% include post-data.html %}
         <div id="post-container">
             <main>
