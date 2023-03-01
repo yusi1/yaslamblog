@@ -132,11 +132,12 @@ strong {
   background-color: var(--bs-alert-bg);
   border: var(--bs-alert-border);
   border-radius: var(--bs-alert-border-radius);
+  font-size: 95%;
 }
 
 .alert-heading {
   color: inherit;
-  font-size: calc(1.320rem + 0.3vw);
+  font-size: calc(1.16rem + 0.3vw);
   margin: 0;
 }
 
