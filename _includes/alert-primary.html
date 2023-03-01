@@ -1,5 +1,5 @@
 <div class="alert alert-primary" role="alert">
-    <b>{{ include.heading | default: "Note:" }}</b>
+    <h4 class="alert-heading">{{ include.heading | default: "Note:" }}</h4>
     <hr>
     <div markdown="span">
         {{ include.content | strip }}
