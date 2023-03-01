@@ -135,10 +135,22 @@ strong {
   font-size: 95%;
 }
 
+@media screen and (max-width: 800px) {
+  .alert {
+    font-size: 1.1rem;
+  }
+}
+
 .alert-heading {
   color: inherit;
   font-size: calc(1.16rem + 0.3vw);
   margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .alert-heading {
+    font-size: calc(1.1rem + 0.3vw);
+  }
 }
 
 .alert-link {
