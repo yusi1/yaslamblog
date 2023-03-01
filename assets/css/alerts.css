@@ -144,6 +144,10 @@ strong {
   font-weight: 700;
 }
 
+.alert-link:hover {
+  color: var(--bs-link-hover-color);
+}
+
 .alert-dismissible {
   padding-right: 3rem;
 }
