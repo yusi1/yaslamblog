@@ -169,7 +169,7 @@ Use UUID&rsquo;s in fstab when installing on a second hard drive on baremetal, F
 
 ## Entropy
 
-{% include alert-primary.html heading="" content="This is optional."%}
+{% include alert-dark.html content="This is optional." %}
 
 -   Install the `haveged` package with
     
