@@ -136,6 +136,8 @@ strong {
 
 .alert-heading {
   color: inherit;
+  font-size: calc(1.320rem + 0.3vw);
+  margin: 0;
 }
 
 .alert-link {
