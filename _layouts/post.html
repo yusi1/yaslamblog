@@ -2,33 +2,32 @@
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
     <head>
-        <html lang=en-GB>
-            <meta charset="utf-8">
-            <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncatewords:30 }}">
-            <meta name="author" content="{{ page.author }}">
-            <meta name="keywords" content="{{ page.tags }}">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>{{ page.title }}</title>
-            <link rel="stylesheet" href="/assets/css/style.css">
-            <link rel="stylesheet" href="/assets/css/alerts.css">
-            <link href="/assets/css/syntax.css" rel="stylesheet" >
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-            <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-            <script>
-             // Add anchors on DOMContentLoaded
-             document.addEventListener('DOMContentLoaded', function(event) {
-                 anchors.add('h1');
-             });
-             // Add "alert-link" className to all links inside bootstrap alerts
-             document.addEventListener("DOMContentLoaded", (e) => {
-                 let a = document.querySelectorAll( '#page-container > main > div.post > div.alert > div > a' );
-                 [...a].forEach( x => x.className += "alert-link" );
-             });
-            </script>
+        <meta charset="utf-8">
+        <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncatewords:30 }}">
+        <meta name="author" content="{{ page.author }}">
+        <meta name="keywords" content="{{ page.tags }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/alerts.css">
+        <link href="/assets/css/syntax.css" rel="stylesheet" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script>
+         // Add anchors on DOMContentLoaded
+         document.addEventListener('DOMContentLoaded', function(event) {
+             anchors.add('h1');
+         });
+         // Add "alert-link" className to all links inside bootstrap alerts
+         document.addEventListener("DOMContentLoaded", (e) => {
+             let a = document.querySelectorAll( '#page-container > main > div.post > div.alert > div > a' );
+             [...a].forEach( x => x.className += "alert-link" );
+         });
+        </script>
     </head>
     <body>
         {% include navigation.html %}
