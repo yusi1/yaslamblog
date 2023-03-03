@@ -35,7 +35,7 @@
         <div id="page-container">
             <main>
                 <div class="post">
-                    {{ content | replace: '<a', '<a target="_blank"' | toc }}
+                    {{ content | replace: '<a', '<a target="_blank"' | replace: '<div class="highlight"', '<div class="highlight-div"' | toc }}
                 </div>
                 {% include comments.html %}
             </main>
