@@ -235,6 +235,12 @@
   border-radius: var(--bs-alert-border-radius);
 }
 
+@media screen and (max-width: 800px) {
+  .alert > div {
+    font-size: 1.2rem;
+  }
+}
+
 .alert-heading {
   color: inherit;
 }
