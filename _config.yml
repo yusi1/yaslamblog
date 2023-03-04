@@ -72,4 +72,4 @@ kramdown:
   show_warnings     : false
   syntax_highlighter_opts:
         block:
-            line_numbers: true
+            line_numbers: false
